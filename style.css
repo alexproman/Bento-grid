@@ -181,7 +181,7 @@ img {
     grid-area: 1 / 1 / 7 / 2;
     background-color: var(--Yellow-100);
 }
-.card7 h3 span {
+.card7 .card-heading span {
     color: var(--Purple-500);
     font-style: italic;
 }
