@@ -1,0 +1,271 @@
+
+
+
+
+
+:root {
+    /* Colors */
+
+    /* primary colors */
+    --Purple-100: hsl(254, 88%, 90%);
+    --Purple-500: hsl(256, 67%, 59%);
+    --body-bg: hsl(0, 0%, 96%);
+    --Yellow-100: hsl(31, 66%, 93%);
+    --Yellow-500: hsl(39, 100%, 71%);
+
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 7%);
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--body-bg);
+}
+
+html {
+    font-family: "DM Sans", sans-serif;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+}
+img {
+    width: 220px;
+}
+
+.container {
+    width: 1120px;
+    height: 880px;
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+}
+
+.card {
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow: hidden;
+    gap: 20px;
+}
+.card img {
+    width: 100%;
+}
+.card .card-heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--Black);
+    line-height: 1;
+}
+/* hero card Start */
+.card1.hero {
+    grid-area: 1 / 2 / 6 / 4;
+    background-color: var(--Purple-500); 
+    align-items: center;
+    justify-content: center;
+
+}
+.card1.hero h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    color: var(--White);
+}
+
+.card1.hero h1 span:nth-child(1){
+    color: var(--Yellow-500);
+}
+.card1.hero h1 span:nth-child(2){
+    font-style: italic;
+}
+.card1.hero img{
+    width: 180px;
+}
+.card1.hero p {
+    color: var(--White);
+    font-weight: 300;
+    margin-top: -20px;
+}
+/* hero card End */
+
+/* card 2 Start  */
+.card2 {
+    grid-area: 6 / 2 / 10 / 3;
+    background-color: var(--White);
+}
+.card2 img {
+    width: 324px;
+}
+/* card 2 End  */
+
+/* card 3 Start  */
+.card3 {
+    grid-area: 6 / 3 / 10 / 4;
+    background-color: var(--Yellow-500);
+}
+
+/* card 3 End  */
+
+/* card 4 Start  */
+.card4 {
+    grid-area: 1 / 4 / 10 / 5;
+    background-color: var(--Purple-100);
+}
+.card4 img {
+    width: 150%;
+}
+.card4 .paragraph {
+    font-size: 18px;
+    margin-right: 10px;
+}
+/* card 4 End  */
+
+/* card 5 Start  */
+.card5 {
+    grid-area: 10 / 3 / 14 / 5;
+    background-color: var(--Purple-500);
+    flex-direction: row;
+    align-items: center;
+}
+.card5 h2 {
+    color: var(--White);
+    
+}
+.card5 img {
+    height: 100%;
+}
+/* card 5 End  */
+
+/* card 6 Start  */
+.card6 {
+    background-color: var(--White);
+    grid-area: 10 / 2 / 14 / 3;
+}
+.card6 .persentage {
+    font-size: 3.5rem;
+}
+.card6 p:nth-child(2){
+    font-size: 18px;
+}
+.card6 h2 {
+    font-size: 3.5rem;
+}
+.card6 img {
+    width: 180px;
+}
+/* card 6 End  */
+
+/* card 7 Start  */
+.card7 {
+    grid-area: 1 / 1 / 7 / 2;
+    background-color: var(--Yellow-100);
+}
+.card7 h3 span {
+    color: var(--Purple-500);
+    font-style: italic;
+}
+/* card 7 End  */
+
+/* card 8 Start  */
+.card8 {
+    grid-area: 7 / 1 / 14 / 2;
+    background-color: var(--Yellow-500);
+}
+/* card 8 End  */
+
+
+
+
+
+
+
+/* footer */
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+}
+
+.attribution {
+    color: var(--Black);
+    font-size: 12px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--Purple-500);
+}
+ /* media  */
+
+@media screen and (max-width:1200px){
+    
+    .container {
+        height: auto;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        flex-direction: column;
+    }
+    .card img {
+        width: 70%;
+    }
+    .card4 .paragraph,
+    .card5 h2 {
+        text-align: center;
+    }
+    
+}
+@media screen and (max-width:768px){
+    
+    .container {
+        width: 330px;
+    }
+    .card {
+        width:100%;
+        padding: 25px;
+        margin: auto;
+    }
+    .card .card-heading{
+        font-size: 1.4rem;
+    }
+    .card4 img {
+        width: 100%;
+    }
+
+    .card5 h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+    .card4 p {
+        margin-right: 0;
+    }
+     .card1.hero h1 {
+        font-size: 3rem;
+    }
+
+    
+    
+}
